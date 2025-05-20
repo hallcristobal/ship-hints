@@ -1,6 +1,5 @@
 #pragma once
 
-#include "./hints.hpp"
 #include "randomizerTypes.h"
 #include <array>
 

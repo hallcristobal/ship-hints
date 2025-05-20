@@ -249,6 +249,30 @@ src/soh/hint_list_item.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_item.cpp.s
 .PHONY : src/soh/hint_list_item.cpp.s
 
+src/static_data.o: src/static_data.cpp.o
+.PHONY : src/static_data.o
+
+# target to build an object file
+src/static_data.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/static_data.cpp.o
+.PHONY : src/static_data.cpp.o
+
+src/static_data.i: src/static_data.cpp.i
+.PHONY : src/static_data.i
+
+# target to preprocess a source file
+src/static_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/static_data.cpp.i
+.PHONY : src/static_data.cpp.i
+
+src/static_data.s: src/static_data.cpp.s
+.PHONY : src/static_data.s
+
+# target to generate assembly for a file
+src/static_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/static_data.cpp.s
+.PHONY : src/static_data.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... src/soh/hint_list_item.o"
 	@echo "... src/soh/hint_list_item.i"
 	@echo "... src/soh/hint_list_item.s"
+	@echo "... src/static_data.o"
+	@echo "... src/static_data.i"
+	@echo "... src/static_data.s"
 .PHONY : help
 
 

@@ -7,6 +7,7 @@ set(SOURCE_FILES
   src/randomizerTypes.h
   src/static_data.h
 
+  src/static_data.cpp
   src/hints.cpp
   src/soh/hint_list_exclude_dungeon.cpp
   src/soh/hint_list_exclude_overworld.cpp

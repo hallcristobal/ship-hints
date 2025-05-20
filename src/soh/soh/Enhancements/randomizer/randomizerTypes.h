@@ -1,3 +1,5 @@
+#pragma once 
+
 typedef enum {
     RHT_NONE,
     RHT_WAY_OF_THE_HERO,
