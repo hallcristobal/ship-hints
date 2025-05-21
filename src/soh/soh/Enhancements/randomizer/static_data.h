@@ -1,7 +1,7 @@
 #pragma once
 
+#include "3drando/hints.hpp"
 #include "randomizerTypes.h"
-#include <array>
 
 namespace Rando {
 class StaticData {

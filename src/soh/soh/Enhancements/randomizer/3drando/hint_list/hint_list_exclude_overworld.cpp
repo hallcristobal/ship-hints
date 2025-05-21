@@ -1,5 +1,6 @@
-#include "../static_data.h"
+#include "../../static_data.h"
 #include "../hints.hpp"
+#include "../../../custom-message/CustomMessageManager.h"
 
 namespace Rando {
 void StaticData::HintTable_Init_Exclude_Overworld() {

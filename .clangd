@@ -1,0 +1,17 @@
+CompileFlags:
+  Add: [-std=c++20, -Isrc/soh/include]
+Completion:
+  AllScopes: Yes
+  ArgumentLists: FullPlaceholders
+  HeaderInsertion: IWYU
+  CodePatterns: All
+InlayHints:
+  BlockEnd: Yes
+  Designators: Yes
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+  DefaultArguments: Yes
+  TypeNameLimit: 24
+Hover:
+  ShowAKA: Yes
