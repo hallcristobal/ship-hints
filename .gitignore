@@ -3,3 +3,5 @@ CMakeFiles/
 cmake_install.cmake
 bin/
 
+.cache/
+compile_commands.json
