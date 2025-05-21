@@ -129,30 +129,6 @@ test_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/build
 .PHONY : test_server/fast
 
-src/hints.o: src/hints.cpp.o
-.PHONY : src/hints.o
-
-# target to build an object file
-src/hints.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/hints.cpp.o
-.PHONY : src/hints.cpp.o
-
-src/hints.i: src/hints.cpp.i
-.PHONY : src/hints.i
-
-# target to preprocess a source file
-src/hints.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/hints.cpp.i
-.PHONY : src/hints.cpp.i
-
-src/hints.s: src/hints.cpp.s
-.PHONY : src/hints.s
-
-# target to generate assembly for a file
-src/hints.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/hints.cpp.s
-.PHONY : src/hints.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -177,101 +153,101 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/soh/hint_list_exclude_dungeon.o: src/soh/hint_list_exclude_dungeon.cpp.o
-.PHONY : src/soh/hint_list_exclude_dungeon.o
+src/soh/soh/Enhancements/custom-message/CustomMessageManager.o: src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.o
+.PHONY : src/soh/soh/Enhancements/custom-message/CustomMessageManager.o
 
 # target to build an object file
-src/soh/hint_list_exclude_dungeon.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_exclude_dungeon.cpp.o
-.PHONY : src/soh/hint_list_exclude_dungeon.cpp.o
+src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.o
+.PHONY : src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.o
 
-src/soh/hint_list_exclude_dungeon.i: src/soh/hint_list_exclude_dungeon.cpp.i
-.PHONY : src/soh/hint_list_exclude_dungeon.i
+src/soh/soh/Enhancements/custom-message/CustomMessageManager.i: src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.i
+.PHONY : src/soh/soh/Enhancements/custom-message/CustomMessageManager.i
 
 # target to preprocess a source file
-src/soh/hint_list_exclude_dungeon.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_exclude_dungeon.cpp.i
-.PHONY : src/soh/hint_list_exclude_dungeon.cpp.i
+src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.i
+.PHONY : src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.i
 
-src/soh/hint_list_exclude_dungeon.s: src/soh/hint_list_exclude_dungeon.cpp.s
-.PHONY : src/soh/hint_list_exclude_dungeon.s
+src/soh/soh/Enhancements/custom-message/CustomMessageManager.s: src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.s
+.PHONY : src/soh/soh/Enhancements/custom-message/CustomMessageManager.s
 
 # target to generate assembly for a file
-src/soh/hint_list_exclude_dungeon.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_exclude_dungeon.cpp.s
-.PHONY : src/soh/hint_list_exclude_dungeon.cpp.s
+src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.s
+.PHONY : src/soh/soh/Enhancements/custom-message/CustomMessageManager.cpp.s
 
-src/soh/hint_list_exclude_overworld.o: src/soh/hint_list_exclude_overworld.cpp.o
-.PHONY : src/soh/hint_list_exclude_overworld.o
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.o: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.o
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.o
 
 # target to build an object file
-src/soh/hint_list_exclude_overworld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_exclude_overworld.cpp.o
-.PHONY : src/soh/hint_list_exclude_overworld.cpp.o
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.o
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.o
 
-src/soh/hint_list_exclude_overworld.i: src/soh/hint_list_exclude_overworld.cpp.i
-.PHONY : src/soh/hint_list_exclude_overworld.i
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.i: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.i
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.i
 
 # target to preprocess a source file
-src/soh/hint_list_exclude_overworld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_exclude_overworld.cpp.i
-.PHONY : src/soh/hint_list_exclude_overworld.cpp.i
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.i
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.i
 
-src/soh/hint_list_exclude_overworld.s: src/soh/hint_list_exclude_overworld.cpp.s
-.PHONY : src/soh/hint_list_exclude_overworld.s
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.s: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.s
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.s
 
 # target to generate assembly for a file
-src/soh/hint_list_exclude_overworld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_exclude_overworld.cpp.s
-.PHONY : src/soh/hint_list_exclude_overworld.cpp.s
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.s
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.cpp.s
 
-src/soh/hint_list_item.o: src/soh/hint_list_item.cpp.o
-.PHONY : src/soh/hint_list_item.o
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.o: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.o
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.o
 
 # target to build an object file
-src/soh/hint_list_item.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_item.cpp.o
-.PHONY : src/soh/hint_list_item.cpp.o
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.o
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.o
 
-src/soh/hint_list_item.i: src/soh/hint_list_item.cpp.i
-.PHONY : src/soh/hint_list_item.i
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.i: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.i
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.i
 
 # target to preprocess a source file
-src/soh/hint_list_item.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_item.cpp.i
-.PHONY : src/soh/hint_list_item.cpp.i
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.i
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.i
 
-src/soh/hint_list_item.s: src/soh/hint_list_item.cpp.s
-.PHONY : src/soh/hint_list_item.s
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.s: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.s
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.s
 
 # target to generate assembly for a file
-src/soh/hint_list_item.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/hint_list_item.cpp.s
-.PHONY : src/soh/hint_list_item.cpp.s
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.s
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.cpp.s
 
-src/static_data.o: src/static_data.cpp.o
-.PHONY : src/static_data.o
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.o: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.o
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.o
 
 # target to build an object file
-src/static_data.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/static_data.cpp.o
-.PHONY : src/static_data.cpp.o
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.o
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.o
 
-src/static_data.i: src/static_data.cpp.i
-.PHONY : src/static_data.i
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.i: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.i
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.i
 
 # target to preprocess a source file
-src/static_data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/static_data.cpp.i
-.PHONY : src/static_data.cpp.i
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.i
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.i
 
-src/static_data.s: src/static_data.cpp.s
-.PHONY : src/static_data.s
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.s: src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.s
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.s
 
 # target to generate assembly for a file
-src/static_data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/static_data.cpp.s
-.PHONY : src/static_data.cpp.s
+src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.s
+.PHONY : src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.cpp.s
 
 # Help Target
 help:
@@ -282,24 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test_server"
-	@echo "... src/hints.o"
-	@echo "... src/hints.i"
-	@echo "... src/hints.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/soh/hint_list_exclude_dungeon.o"
-	@echo "... src/soh/hint_list_exclude_dungeon.i"
-	@echo "... src/soh/hint_list_exclude_dungeon.s"
-	@echo "... src/soh/hint_list_exclude_overworld.o"
-	@echo "... src/soh/hint_list_exclude_overworld.i"
-	@echo "... src/soh/hint_list_exclude_overworld.s"
-	@echo "... src/soh/hint_list_item.o"
-	@echo "... src/soh/hint_list_item.i"
-	@echo "... src/soh/hint_list_item.s"
-	@echo "... src/static_data.o"
-	@echo "... src/static_data.i"
-	@echo "... src/static_data.s"
+	@echo "... src/soh/soh/Enhancements/custom-message/CustomMessageManager.o"
+	@echo "... src/soh/soh/Enhancements/custom-message/CustomMessageManager.i"
+	@echo "... src/soh/soh/Enhancements/custom-message/CustomMessageManager.s"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.o"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.i"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_dungeon.s"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.o"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.i"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_exclude_overworld.s"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.o"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.i"
+	@echo "... src/soh/soh/Enhancements/randomizer/3drando/hint_list/hint_list_item.s"
 .PHONY : help
 
 
