@@ -60,7 +60,6 @@ const std::string CustomMessage::GetForLanguage(uint8_t language, MessageFormat 
     return output;
 }
 
-const std::vector<std::string> CustomMessage::GetAllMessages(MessageFormat format) const {
-    std::vector<std::string> output = messages;
-    return output;
+const std::vector<std::string>& CustomMessage::GetAllMessages() const {
+    return messages;
 }

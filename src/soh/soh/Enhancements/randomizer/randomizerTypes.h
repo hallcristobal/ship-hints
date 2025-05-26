@@ -1,6 +1,8 @@
-#pragma once 
+#ifndef _SOH_RANDOMIZER_TYPES
+#define _SOH_RANDOMIZER_TYPES
+#include "../../utils.hpp"
 
-typedef enum {
+ENUM_MACRO(RandomizerHintTextKey, 
     RHT_NONE,
     RHT_WAY_OF_THE_HERO,
     RHT_FOOLISH,
@@ -1494,4 +1496,5 @@ typedef enum {
     RHT_JABU_JABUS_BELLY_GRASS,
     // MAX
     RHT_MAX,
-} RandomizerHintTextKey;
+);
+#endif // _SOH_RANDOMIZER_TYPES

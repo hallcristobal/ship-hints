@@ -53,8 +53,9 @@ public:
   const std::string GetGerman(MessageFormat format = MF_FORMATTED) const;
   const std::string GetForLanguage(uint8_t language,
                                    MessageFormat format = MF_FORMATTED) const;
-  const std::vector<std::string>
-  GetAllMessages(MessageFormat format = MF_FORMATTED) const;
+  // const std::vector<std::string> GetAllMessages(MessageFormat format =
+  // MF_FORMATTED) const;
+  const std::vector<std::string> &GetAllMessages() const;
 
 private:
   std::vector<std::string> messages = {"", TODO_TRANSLATE, TODO_TRANSLATE};
