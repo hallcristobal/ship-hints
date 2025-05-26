@@ -40,3 +40,17 @@ std::vector<std::string> Utils::split_string(const std::string &str) {
   }
   return result;
 }
+
+void Utils::log(const char *const caller, const char *const message,
+                LogFlags flags) {
+#ifdef DEBUG
+  std::ostream *stream = flags & LogFlags::ERROR ? &std::cerr : &std::cout;
+  *stream << "[" << caller << "] " << message << std::endl;
+#endif
+}
+void Utils::log(const char *const caller, const std::string &message,
+                LogFlags flags) {
+#ifdef DEBUG
+  Utils::log(caller, message.c_str(), flags);
+#endif
+}

@@ -11,52 +11,63 @@
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
+#include <sstream>
 #include <vector>
 
 using namespace Rando;
 namespace fs = std::filesystem;
-
 std::array<HintText, RHT_MAX> Rando::StaticData::hintTextTable = {};
 
-// Output data
-fs::path _currentPath = fs::path(Utils::getExecutablePath());
-fs::path g_output_dir = _currentPath.parent_path() / "output";
+fs::path g_output_dir =
+    fs::path(Utils::getExecutablePath()).parent_path() / "output";
+
+#define LOG(...) Utils::log(__PRETTY_FUNCTION__, __VA_ARGS__)
+#define ELOG(...)                                                              \
+  Utils::log(__PRETTY_FUNCTION__, __VA_ARGS__, Utils::LogFlags::ERROR)
 
 class JsonObject {
 private:
+public:
+  JsonObject() : languages({}) {}
+  std::array<nlohmann::json, LANGUAGE_MAX> languages = {
+      nlohmann::json::object(),
+      nlohmann::json::object(),
+      nlohmann::json::object(),
+      nlohmann::json::object(),
+  };
+
   nlohmann::json create_json_pair(const std::string &key,
                                   const std::string &value) {
     nlohmann::json json;
-    json[key.c_str()] = value.c_str();
+    json[key] = value;
     return json;
   }
 
-public:
-  JsonObject() : languages({}) {}
-  std::array<std::vector<std::string>, LANGUAGE_MAX> languages;
-
   void insert(std::string &key, const CustomMessage &message) {
-    this->languages[LANGUAGE_ENG].push_back(
-        create_json_pair(key, message.GetForLanguage(LANGUAGE_ENG, MF_RAW)));
-    this->languages[LANGUAGE_GER].push_back(
-        create_json_pair(key, message.GetForLanguage(LANGUAGE_GER, MF_RAW)));
-    this->languages[LANGUAGE_FRA].push_back(
-        create_json_pair(key, message.GetForLanguage(LANGUAGE_FRA, MF_RAW)));
-    // TODO: Figure out why JPN faults out
-    // this->languages[LANGUAGE_JPN].push_back(nlohmann::json::object(
-    //     {key, message.GetForLanguage(LANGUAGE_JPN, MF_RAW)}));
+    std::string eng_string = message.GetForLanguage(LANGUAGE_ENG, MF_RAW);
+    // LOG("key : '" + key + "' - message: '" + eng_string + "'");
+    if (eng_string.empty()) {
+      return;
+    }
+
+    // clang-format off
+    this->languages[LANGUAGE_ENG][key] =message.GetForLanguage(LANGUAGE_ENG, MF_RAW);
+    this->languages[LANGUAGE_GER][key] =message.GetForLanguage(LANGUAGE_GER, MF_RAW);
+    this->languages[LANGUAGE_FRA][key] =message.GetForLanguage(LANGUAGE_FRA, MF_RAW);
+    // TODO: Why does inserting into JPN seg fault?
+    // this->languages[LANGUAGE_JPN][key] =message.GetForLanguage(LANGUAGE_JPN, MF_RAW);
+    // clang-format on
   }
 
   void insert(std::string &key, const std::vector<CustomMessage> &messages) {
     for (auto it = messages.begin(); it != messages.end(); it++) {
-      this->languages[LANGUAGE_ENG].push_back(
-          nlohmann::json{{key, (*it).GetForLanguage(LANGUAGE_ENG, MF_RAW)}});
-      this->languages[LANGUAGE_GER].push_back(
-          nlohmann::json{{key, (*it).GetForLanguage(LANGUAGE_GER, MF_RAW)}});
-      this->languages[LANGUAGE_FRA].push_back(
-          nlohmann::json{{key, (*it).GetForLanguage(LANGUAGE_FRA, MF_RAW)}});
-      this->languages[LANGUAGE_JPN].push_back(
-          nlohmann::json{{key, (*it).GetForLanguage(LANGUAGE_JPN, MF_RAW)}});
+      // clang-format off
+      this->languages[LANGUAGE_ENG][key] = (*it).GetForLanguage(LANGUAGE_ENG, MF_RAW);
+      this->languages[LANGUAGE_GER][key] = (*it).GetForLanguage(LANGUAGE_GER, MF_RAW);
+      this->languages[LANGUAGE_FRA][key] = (*it).GetForLanguage(LANGUAGE_FRA, MF_RAW);
+      // TODO: Why does inserting into JPN seg fault?
+      // this->languages[LANGUAGE_JPN][key] = (*it).GetForLanguage(LANGUAGE_JPN, MF_RAW);
+      // clang-format on
     }
   }
 
@@ -79,18 +90,11 @@ public:
 };
 
 int main(int argc, char **argv) {
-  for (int i = 0; i < argc; i++)
-    std::cout << "  arv[" << i << "] = " << argv[i] << std::endl;
-
   StaticData::HintTable_Init_Exclude_Overworld();
   StaticData::HintTable_Init_Exclude_Dungeon();
   StaticData::HintTable_Init_Item();
 
-  std::vector<std::string> all_hint_texts;
   JsonObject plain, ambiguous, obscure;
-  std::cout << "RandomizerHintTextKey::RHT_JUNK01" << " - "
-            << RandomizerHintTextKeyStrings[RandomizerHintTextKey::RHT_JUNK01]
-            << std::endl;
 
   for (auto it = StaticData::hintTextTable.begin();
        it != StaticData::hintTextTable.end(); it++) {
@@ -99,24 +103,21 @@ int main(int argc, char **argv) {
     if (key.empty()) {
       throw "Invalid key: " + key;
     }
-    std::cout << "key: " << key << std::endl;
     plain.insert(key, (*it).getClearText());
-    // ambiguous.insert(key, (*it).getAmbiguousText());
-    // obscure.insert(key, (*it).getObscureText());
+    ambiguous.insert(key, (*it).getAmbiguousText());
+    obscure.insert(key, (*it).getObscureText());
   }
-
-  nlohmann::json hint_data;
-  hint_data["hintCount"] = StaticData::hintTextTable.size();
-  hint_data["hints"] = all_hint_texts;
 
   if (!fs::exists(g_output_dir)) {
     if (!fs::create_directory(g_output_dir)) {
-      std::cout << "Error creating directory: " << strerror(errno) << std::endl;
+      std::stringstream ss("Error creating directory: ");
+      ss << strerror(errno);
+      ELOG(ss.str());
       return -1;
     }
   }
 
-  plain.write_to_file("plain.json", true);
+  plain.write_to_file("plain.json");
   ambiguous.write_to_file("ambiguous.json");
   obscure.write_to_file("obscure.json");
 }

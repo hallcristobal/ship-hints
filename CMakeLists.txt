@@ -11,6 +11,9 @@ file(GLOB_RECURSE SOURCE_FILES
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_executable(test_server ${SOURCE_FILES})
+IF (DEFINED DEBUG)
+  add_compile_definitions(DEBUG)
+ENDIF()
 
 # Include nlohmann_json
 set(JSON_BuildTests OFF CACHE INTERNAL "")
